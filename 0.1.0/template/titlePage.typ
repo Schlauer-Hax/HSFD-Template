@@ -33,7 +33,7 @@ date
     ]
 
     align(center + bottom)[
-        Einreichng: #{ date }
+        Einreichung: #{ date }
     ]
 }
 
