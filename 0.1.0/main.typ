@@ -26,7 +26,7 @@
   titlePage
   pagebreak()
 
-  outline(title: "Inhatsverzeichnis")
+  outline(title: "Inhaltsverzeichnis")
   pagebreak()
 
   outline(
