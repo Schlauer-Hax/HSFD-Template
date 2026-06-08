@@ -7,6 +7,8 @@
   set text(
     font: "Times New Roman",
     size: 12pt,
+    lang: "de",
+    region: "de",
   )
   set par(leading: 0.5em)
   set page(numbering: none)
