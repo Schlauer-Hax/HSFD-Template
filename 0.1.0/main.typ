@@ -9,6 +9,7 @@
     size: 12pt,
     lang: "de",
     region: "de",
+    hyphenate: true,
   )
   set par(leading: 0.5em)
   set page(numbering: none)
