@@ -29,11 +29,15 @@
   outline(title: "Inhaltsverzeichnis")
   pagebreak()
 
-  outline(
-    title: [Abbildungsverzeichnis],
-    target: figure,
-  )
-  pagebreak()
+  context {
+    if query(figure).len() > 0 {
+      outline(
+        title: [Abbildungsverzeichnis],
+        target: figure,
+      )
+      pagebreak()
+    }
+  }
 
   set page(numbering: "1")
   counter(page).update(1)
