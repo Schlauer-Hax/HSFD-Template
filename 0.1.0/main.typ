@@ -11,7 +11,7 @@
     region: "de",
     hyphenate: true,
   )
-  set par(leading: 0.5em)
+  set par(leading: 0.5em, justify: true)
   set page(numbering: none)
   set page(
     paper: "a4",
