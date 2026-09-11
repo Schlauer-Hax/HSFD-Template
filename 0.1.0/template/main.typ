@@ -10,6 +10,16 @@
     "xx.xx.xxxx",
   ),
   bibliography: bibliography("bibliography.bib", title: "Quellenverzeichnis"),
+  // aiUsage: [Welche KI-Werkzeuge wofür verwendet wurden],
+  declaration: (
+    name: "NACHNAME, VORNAME",
+    matriculation: "XXXXXXX",
+    program: "Angewandte Informatik",
+    module: "MODUL",
+    place: "Fulda",
+    date: "xx.xx.xxxx",
+    // signature: image("assets/unterschrift.svg", width: 5cm),
+  ),
 )
 
 
