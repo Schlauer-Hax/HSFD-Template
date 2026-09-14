@@ -4,6 +4,7 @@
   appendix: none,
   aiUsage: none,
   declaration: none,
+  abbreviations: none,
   body,
 ) = {
   set heading(numbering: "1.1.")
@@ -24,6 +25,7 @@
   show heading: set block(
     below: 2em,
   )
+  show figure: set block(breakable: true)
 
 
   titlePage
@@ -33,13 +35,30 @@
   pagebreak()
 
   context {
-    if query(figure).len() > 0 {
-      outline(
-        title: [Abbildungsverzeichnis],
-        target: figure,
-      )
+    if query(figure.where(kind: image)).len() > 0 {
+      outline(title: [Abbildungsverzeichnis], target: figure.where(kind: image))
       pagebreak()
     }
+    if query(figure.where(kind: table)).len() > 0 {
+      outline(title: [Tabellenverzeichnis], target: figure.where(kind: table))
+      pagebreak()
+    }
+    if query(figure.where(kind: raw)).len() > 0 {
+      outline(title: [Listingverzeichnis], target: figure.where(kind: raw))
+      pagebreak()
+    }
+  }
+
+  // abbreviations: array of (short, long) pairs
+  if abbreviations != none {
+    heading(numbering: none, outlined: false)[Abkürzungsverzeichnis]
+    table(
+      columns: (auto, 1fr),
+      stroke: none,
+      align: left + top,
+      ..abbreviations.map(a => (strong(a.at(0)), a.at(1))).flatten(),
+    )
+    pagebreak()
   }
 
   set page(numbering: "1")
@@ -50,10 +69,15 @@
   pagebreak()
   bibliography
 
+  // appendix: array of content blocks; each starts on a new page and is numbered A., B., ...
   if appendix != none {
-    pagebreak()
     counter(heading).update(0)
-    appendix
+    set heading(numbering: none, outlined: false)
+    show heading.where(level: 1): set heading(numbering: "A.", outlined: true, supplement: [Anhang])
+    for item in appendix {
+      pagebreak()
+      item
+    }
   }
 
   if aiUsage != none {
