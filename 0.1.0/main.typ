@@ -1,6 +1,7 @@
 #let hsfdTemplate(
   titlePage: none,
   bibliography: none,
+  appendix: none,
   aiUsage: none,
   declaration: none,
   body,
@@ -48,6 +49,12 @@
 
   pagebreak()
   bibliography
+
+  if appendix != none {
+    pagebreak()
+    counter(heading).update(0)
+    appendix
+  }
 
   if aiUsage != none {
     pagebreak()
