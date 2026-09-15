@@ -103,7 +103,7 @@
       Hiermit versichere ich, dass ich die Prüfungsleistung bzw. Abschlussarbeit in o.g. Modul -- bei einer Gruppenarbeit den entsprechend gekennzeichneten Anteil der Arbeit -- selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe. Die aus fremden Quellen direkt oder indirekt übernommenen Texte, Gedankengänge, Konzepte, Grafiken usw. in meinen Ausführungen habe ich als solche eindeutig gekennzeichnet und mit vollständigen Verweisen auf die jeweilige Quelle versehen.
 
       #if aiUsage != none [
-        Alle Zitate sowie alle Abschnitte, die durch den Einsatz von KI-basierten Tools verfasst oder modifiziert wurden, sind auf ihre Korrektheit überprüft worden und entsprechend kenntlich gemacht. Eine Dokumentation der verwendeten KI-Werkzeuge mit ihrem Verwendungszweck liegt der Arbeit bei.
+        Alle Zitate sowie alle Abschnitte, die durch den Einsatz von KI-basierten Tools verfasst oder modifiziert wurden, sind auf ihre Korrektheit überprüft worden. Eine Dokumentation der verwendeten KI-Werkzeuge mit ihrem Verwendungszweck liegt der Arbeit bei.
       ]
 
       Für die Qualität und sämtliche Inhalte der vorliegenden Arbeit trage ich die Verantwortung und mein gestalterischer Einfluss überwiegt.
